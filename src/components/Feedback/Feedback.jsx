@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import FeedbackOptions from './FeedbackOptions';
+import FeedbackOptions from '../FeedbackOptions/FeedbackOptions';
 import Statistics from './Statistics';
 
 
@@ -17,11 +17,6 @@ class Feedback extends Component {
     neutral: 0,
     bad: 0,
   };
-
-  options = Object.keys(this.state);
-
-  total = 0;
-  positivePercentage = 0;
 
   handleLeaveFeedback = e => {
     this.setState(prevState => ({
