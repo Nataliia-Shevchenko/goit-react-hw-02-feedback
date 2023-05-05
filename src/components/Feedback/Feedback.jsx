@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import Section from 'components/Section/Section';
 import FeedbackOptions from '../FeedbackOptions/FeedbackOptions';
-import Statistics from './Statistics';
-
+import Statistics from '../Statistics/Statistics';
 
 class Feedback extends Component {
   // static defaultProps = {
@@ -38,13 +38,11 @@ class Feedback extends Component {
   render() {
     const { good, neutral, bad } = this.state;
     return (
-      <div className="Feedback">
-        <h2>Please leave feedback</h2>
+      <Section title="Please leave feedback">
         <FeedbackOptions
           options={Object.keys(this.state)}
           onLeaveFeedback={this.handleLeaveFeedback}
         ></FeedbackOptions>
-        <h2>Statistics</h2>
         <Statistics
           good={good}
           neutral={neutral}
@@ -52,7 +50,7 @@ class Feedback extends Component {
           total={good + neutral + bad}
           positivePercentage={Math.round((good * 100) / (good + neutral + bad))}
         ></Statistics>
-      </div>
+      </Section>
     );
   }
 }

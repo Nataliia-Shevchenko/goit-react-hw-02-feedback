@@ -11,15 +11,15 @@ export const ButtonList = styled.ul`
 `;
 
 export const ButtonElement = styled.button`
-  min-width: 80px;
-  min-height: 30px;
+  min-width: 90px;
+  padding: 12px;
   background-color: #e49898;
   border-radius: 25px;
   border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   font-weight: 600;
-  color: #2e0202;
+  text-transform: uppercase;
   &:hover {
     background-color: #ee5151;
   }
-
 `;
