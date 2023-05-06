@@ -1,5 +1,5 @@
 import React from 'react';
-import Feedback from './Feedback/Feedback';
+import Feedback from './Feedback';
 
 export const App = () => {
   return (
